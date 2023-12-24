@@ -104,3 +104,11 @@ sudo ./zedsdk.zstd.run
 # Install ZED Python Package
 echo "Installing ZED Python Package..."
 sudo pip3 install pyzed
+
+# Clone Zed Ros Wrapper
+echo "Cloning Zed Ros Wrapper..."
+cd ~/catkin_ws/src
+git --recurse-submodules https://github.com/stereolabs/zed-ros-wrapper.git
+cd ..
+catkin_make
+rosdep update
